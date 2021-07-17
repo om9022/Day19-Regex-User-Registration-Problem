@@ -6,7 +6,6 @@ import java.util.regex.Pattern;
 public class UserRegistration {
 	public static void main(String[] args) 
 	{
-
 		UserRegistrationService details = new UserRegistrationService();
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Welcome to User Registration");
