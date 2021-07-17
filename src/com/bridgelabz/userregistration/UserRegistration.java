@@ -9,6 +9,8 @@ public class UserRegistration {
 		UserRegistration details = new UserRegistration();
 		String firstName ="Firstname";
 		details.checkFirstName(firstName);
+		String lastName ="Lastname";
+		details.checkLastName(lastName);
 	}
 
 	/**
@@ -25,5 +27,20 @@ public class UserRegistration {
 		{
 			System.out.println("First name is invalid");
 		}
+	}
+
+	/**
+	 * @param method to check last name 
+	 */
+	private void checkLastName(String lastName) 
+	{
+		boolean IsMatched = Pattern.compile("^[A-Z]{1}[a-z]{3,}$").matcher(lastName).matches();
+		if(IsMatched)
+		{
+			System.out.println("Last name is correct");
+		}
+		else 
+		{
+			System.out.println("Larst name is invalid");		}
 	}
 }
