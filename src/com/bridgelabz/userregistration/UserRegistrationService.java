@@ -18,7 +18,7 @@ public class UserRegistrationService {
 			System.out.println("First name is invalid");
 		}
 	}
-	
+
 	/**
 	 * @param method to check last name 
 	 */
@@ -34,7 +34,7 @@ public class UserRegistrationService {
 			System.out.println("Larst name is invalid");
 		}
 	}
-	
+
 	/**
 	 * @param method to check email address 
 	 */
@@ -63,6 +63,23 @@ public class UserRegistrationService {
 		else 
 		{
 			System.out.println("Phone number is invalid");
+		}
+
+	}
+
+	/**
+	 * @param method to check password 
+	 */
+	public void checkPassword(String password)
+	{
+		boolean IsMatched = Pattern.compile("[A-Za-z0-9]{8,}").matcher(password).matches();
+		if(IsMatched)
+		{
+			System.out.println("Password is correct");
+		}
+		else 
+		{
+			System.out.println("Password is invalid");
 		}
 		
 	}
